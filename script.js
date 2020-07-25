@@ -1,5 +1,4 @@
-require('dotenv').config();
-console.log(process.env.API_KEY);
+require('dotenv').config({ path: __dirname + '/.env' });
 
 const button = document.getElementById('button');
 const audioElement = document.getElementById('audio');

@@ -116,9 +116,8 @@ module.exports.parse = parse
 
 }).call(this,require('_process'))
 },{"_process":5,"fs":3,"path":4}],2:[function(require,module,exports){
-(function (process){
-require('dotenv').config();
-console.log(process.env.API_KEY);
+(function (process,__dirname){
+require('dotenv').config({ path: __dirname + '/.env' });
 
 const button = document.getElementById('button');
 const audioElement = document.getElementById('audio');
@@ -169,7 +168,7 @@ const getJokes = async () => {
 button.addEventListener('click', getJokes);
 audioElement.addEventListener('ended', toggleButton);
 
-}).call(this,require('_process'))
+}).call(this,require('_process'),"/")
 },{"_process":5,"dotenv":1}],3:[function(require,module,exports){
 
 },{}],4:[function(require,module,exports){
