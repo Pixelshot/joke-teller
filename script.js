@@ -1,5 +1,5 @@
-// require('dotenv').config();
-import 'dotenv/config';
+require('dotenv').config();
+
 console.log(process.env.API_KEY);
 
 const button = document.getElementById('button');
